@@ -5,11 +5,9 @@ let dropDownBodyOptions = document.querySelectorAll(".dropdown-body li");
 let searchInput = document.querySelector(".search-input");
 let showMoreButton = document.querySelector(".show-more-btn");
 
-/*
-    FUNCTIONS
-*/
+// FUNCTIONS
 
-// Country Card HTML Structure
+// COUNTRIES CARD STRUCTURE
 function countryStructure(data) {
   return `
       <a href="#" class="country scale-effect" data-country-name="${data.name}">
@@ -28,7 +26,7 @@ function countryStructure(data) {
       `;
 }
 
-// Get All Countries
+// GET ALL COUNTRIES
 async function getCountries(query, limit = 12, getRest = false) {
   let url = `${baseApiLink}${query}`;
   try {
@@ -41,7 +39,7 @@ async function getCountries(query, limit = 12, getRest = false) {
 
     if (response.status >= 200 && response.status < 300) {
       if (data) {
-        controlLoader("open"); // Open
+        controlLoader("open"); // OPEN
         countriesGrid.classList.remove("no-grid", "no-flex");
         limit == null ? (countriesGrid.innerHTML = "") : "";
 
@@ -51,7 +49,7 @@ async function getCountries(query, limit = 12, getRest = false) {
         countries = countriesGrid.querySelectorAll(".country");
         moreDetails(countries);
 
-        controlLoader(); // Close
+        controlLoader(); // CLOSE 
       } else {
         notifications(countriesGrid);
       }
@@ -73,7 +71,7 @@ async function getCountries(query, limit = 12, getRest = false) {
 }
 getCountries(`${all}${byFields}`);
 
-// Get Countries By Region
+// GET COUNTRIE BY REGION
 function getCountriesByRegion(region) {
   if (region == "all") {
     countriesGrid.innerHTML = "";
@@ -84,7 +82,7 @@ function getCountriesByRegion(region) {
   }
 }
 
-// Get Countries By Search
+// COUNTRIES SEARCHING
 function getCountriesBySearch() {
   let searchInputValue = searchInput.value.trim().toLowerCase();
   if (searchInputValue == "" || searchInputValue.length == 0) {
@@ -98,7 +96,6 @@ function getCountriesBySearch() {
   }
 }
 
-// Save The Country We Want to Get Its Details To SessitionStorage
 function selectedForDetails(id, destination) {
   sessionStorage.setItem("id", id);
   window.location = destination;
@@ -113,7 +110,7 @@ function moreDetails(array) {
   });
 }
 
-// Control Drop Down Menu
+// CONTROL DROP DOWN MENU
 function controlDropDown() {
   let dropDownWrapper = document.querySelector(".dropdown-wrapper");
   if (dropDownWrapper.classList.contains("open")) {
@@ -125,9 +122,7 @@ function controlDropDown() {
 
 function showMorecountries() {}
 
-/*
-    EVENTS
-*/
+// EVENTS
 
 dropDownHeader.addEventListener("click", controlDropDown);
 searchInput.addEventListener("paste", getCountriesBySearch);
@@ -141,9 +136,7 @@ showMoreButton.addEventListener("click", () => {
   }, 2000);
 });
 
-/*
-    LOOPS
-*/
+// LOOPS
 
 dropDownBodyOptions.forEach((option) => {
   option.addEventListener("click", () => {

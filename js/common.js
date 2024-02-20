@@ -7,9 +7,8 @@ let byFields = `?fields=name,population,region,capital,flags`;
 
 let scrollBtn = document.querySelector(".scroll-top");
 
-/*
-    FUNCTIONS
-*/
+
+// FUNCTIONS   
 
 // Control Loading
 function controlLoader(status = "close") {
@@ -20,8 +19,10 @@ function controlLoader(status = "close") {
     loader.classList.remove("close");
   }
 }
+// LOADING END
 
-// Theme Switcher Functions
+
+// THEME SWITCHER
 let switchBtn = document.querySelector(".theme-toggle");
 let switchBtnText = switchBtn.querySelector(".theme-text");
 let switchBtnIcon = switchBtn.querySelector(".theme-icon");
@@ -54,7 +55,7 @@ function notifications(
   controlLoader(); // Close
 }
 
-// Scroll Top
+// SCROLL TOP
 function scrollTop() {
   window.scrollTo({
     top: 0,
@@ -63,7 +64,7 @@ function scrollTop() {
   });
 }
 
-// Toggle Scroll Top Button
+// TOGGLE SCROLL TOP BUTTON
 function controlScrollButton() {
   if (
     (document.documentElement.scrollTop || window.pageYOffset) >=
@@ -75,9 +76,7 @@ function controlScrollButton() {
   }
 }
 
-/*
-    EVENTS
-*/
+// EVENTS
 
 scrollBtn.addEventListener("click", scrollTop);
 switchBtn.addEventListener("click", () => {
