@@ -29,7 +29,7 @@ function countryStructure(data) {
 }
 
 // Get All Countries
-async function getCountries(query, limit = 50, getRest = false) {
+async function getCountries(query, limit = 12, getRest = false) {
   let url = `${baseApiLink}${query}`;
   try {
     let response = await fetch(url, { cache: "force-cache" });
