@@ -7,7 +7,6 @@ let showMoreButton = document.querySelector(".show-more-btn");
 
 // FUNCTIONS
 
-// COUNTRIES CARD STRUCTURE
 function countryStructure(data) {
   return `
       <a href="#" class="country scale-effect" data-country-name="${data.name}">
@@ -49,7 +48,7 @@ async function getCountries(query, limit = 12, getRest = false) {
         countries = countriesGrid.querySelectorAll(".country");
         moreDetails(countries);
 
-        controlLoader(); // CLOSE 
+        controlLoader(); // CLOSE
       } else {
         notifications(countriesGrid);
       }

@@ -2,21 +2,9 @@ body {
   font-size: 16px;
 }
 
-.btn {
-  display: inline-block;
-  background-color: hsl(0, 0%, 100%);
-  color: hsl(200, 15%, 8%);
-  text-transform: capitalize;
-  -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-  padding: 7px 21px;
-  border-radius: 4px;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
-}
 .btn:hover {
-  -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.11);
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.11);
+  -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1098039216);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1098039216);
 }
 .btn.btn-back {
   margin: 60px 0;
@@ -71,11 +59,14 @@ body {
 .country-flag {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  width: 450px;
   max-width: 450px;
-  -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  max-height: 350px;
+  -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.0784313725);
+          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.0784313725);
   overflow: hidden;
   margin-right: 70px;
+  border-radius: 6px;
 }
 @media (max-width: 39.9375em) {
   .country-flag {
@@ -94,19 +85,19 @@ body {
   padding: 40px 0;
 }
 .country-info h1 {
-  color: hsl(200, 15%, 8%);
+  color: #111517;
   margin-bottom: 30px;
 }
 .country-info strong {
   text-transform: capitalize;
-  color: hsl(200, 15%, 8%);
+  color: #111517;
 }
 .country-info strong.warning {
-  color: #d21034;
+  color: #d21034 !important;
 }
 .country-info li {
   text-transform: capitalize;
-  color: hsl(209, 23%, 22%);
+  color: #2b3945;
 }
 .country-info li button {
   font-size: inherit;
