@@ -1,7 +1,7 @@
 body {
   &.dark-theme {
+    transition: 1s;
     $box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
     background-color: $bg-very-dark-blue;
     color: $white;
 
@@ -13,35 +13,44 @@ body {
     }
 
     .header {
+      transition: 1s;
       background: $dark-blue;
 
       .theme-toggle {
+        transition: 1s;
         color: $white;
       }
     }
 
     .filters {
+      transition: 1s;
       .search-icon {
+        transition: 1s;
         color: $white;
       }
 
       .search-input {
+        transition: 1s;
         color: $white;
         background-color: $dark-blue;
 
         &::placeholder {
+          transition: 1s;
           color: $white;
         }
       }
 
       .dropdown-header,
       .dropdown-body {
+        transition: 1s;
         background: $dark-blue;
       }
 
       .dropdown-body {
+        transition: 1s;
         li {
           &:hover {
+            transition: 1s;
             background-color: lighten($color: $dark-blue, $amount: 5%);
           }
         }
@@ -49,7 +58,9 @@ body {
     }
 
     .countries-grid {
+      transition: 1s;
       .country {
+        transition: 1s;
         color: $white;
         background: $dark-blue;
 
@@ -60,32 +71,40 @@ body {
     }
 
     .loader {
+      transition: 1s;
       background-color: $bg-very-dark-blue;
 
       .spinner .icon {
+        transition: 1s;
         color: $white;
       }
     }
 
     .scroll-top {
+      transition: 1s;
       background-color: $dark-blue;
     }
 
     .notifi-wrapper {
+      transition: 1s;
       color: $white;
     }
 
     .btn {
+      transition: 1s;
       background-color: $dark-blue;
       color: $white;
       box-shadow: $box-shadow;
     }
 
     .country-info {
+      transition: 1s;
       li {
+        transition: 1s;
         color: $dark-gray;
       }
       strong {
+        transition: 1s;
         color: $white;
       }
     }

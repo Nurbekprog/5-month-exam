@@ -7,8 +7,7 @@ let byFields = `?fields=name,population,region,capital,flags`;
 
 let scrollBtn = document.querySelector(".scroll-top");
 
-
-// FUNCTIONS   
+// FUNCTIONS
 
 // Control Loading
 function controlLoader(status = "close") {
@@ -20,7 +19,6 @@ function controlLoader(status = "close") {
   }
 }
 // LOADING END
-
 
 // THEME SWITCHER
 let switchBtn = document.querySelector(".theme-toggle");
@@ -80,7 +78,7 @@ function controlScrollButton() {
 
 scrollBtn.addEventListener("click", scrollTop);
 switchBtn.addEventListener("click", () => {
-   theme = theme == "light" ? "dark" : "light";
+  theme = theme == "light" ? "dark" : "light";
   chanegMode(theme, switchBtnText, switchBtnIcon);
   localStorage.setItem("theme", theme);
 });
