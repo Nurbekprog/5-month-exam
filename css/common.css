@@ -188,13 +188,16 @@ button {
 }
 
 .header {
-  position: relative;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
   background: #ffffff;
   padding: 1.25rem 0;
   -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.0784313725);
           box-shadow: 0 2px 15px rgba(0, 0, 0, 0.0784313725);
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
+  z-index: 100;
 }
 .header .container {
   display: -webkit-box;

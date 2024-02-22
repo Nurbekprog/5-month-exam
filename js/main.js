@@ -2,8 +2,10 @@ let countriesGrid = document.querySelector(".countries-grid");
 let countries;
 let dropDownHeader = document.querySelector(".dropdown-header");
 let dropDownBodyOptions = document.querySelectorAll(".dropdown-body li");
+let sortHead = document.querySelector(".sort-head");
+let sortBodyOptions = document.querySelectorAll(".sort-body li");
 let searchInput = document.querySelector(".search-input");
-let showMoreButton = document.querySelector(".show-more-btn");
+
 
 // FUNCTIONS
 
@@ -119,21 +121,35 @@ function controlDropDown() {
   }
 }
 
-function showMorecountries() {}
+// LOOPS
 
-// EVENTS
-
-dropDownHeader.addEventListener("click", controlDropDown);
-searchInput.addEventListener("paste", getCountriesBySearch);
-searchInput.addEventListener("keyup", getCountriesBySearch);
-showMoreButton.addEventListener("click", () => {
-  showMoreButton.textContent = "loading countries...";
-  getCountries(all, (limit = 250), (getRest = true));
-  setTimeout(() => {
-    showMoreButton.style.display = "none";
-    showMoreButton.textContent = "show more";
-  }, 2000);
+dropDownBodyOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    controlLoader("open"); // Open
+    let optionValue = option.dataset.region.toLowerCase();
+    optionValue == "all"
+      ? (showMoreButton.style.display = "block")
+      : (showMoreButton.style.display = "none");
+    getCountriesByRegion(optionValue);
+    controlDropDown();
+    // Extra Code [Can Be Omitted]
+    optionValue = optionValue.split("");
+    let firstLetter = optionValue[0].toUpperCase();
+    optionValue = optionValue.slice(1);
+    optionValue = firstLetter + optionValue.join("");
+    dropDownHeader.querySelector("span").textContent = optionValue;
+  });
 });
+
+// CONTROL DROP DOWN MENU
+function controlDropDown() {
+  let dropDownWrapper = document.querySelector(".dropdown-wrapper");
+  if (dropDownWrapper.classList.contains("open")) {
+    dropDownWrapper.classList.remove("open");
+  } else {
+    dropDownWrapper.classList.add("open");
+  }
+}
 
 // LOOPS
 

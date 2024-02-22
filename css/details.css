@@ -7,7 +7,7 @@ body {
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1098039216);
 }
 .btn.btn-back {
-  margin: 60px 0;
+  margin: 160px 0 80px 0;
 }
 .btn.btn-with-icon {
   display: -webkit-inline-box;

@@ -1,10 +1,12 @@
 .header {
-  position: relative;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
   background: $white;
   padding: 1.25rem 0; // 20px
   box-shadow: $box-shadow;
   transition: $fast-transition;
-
+  z-index: 100;
   .container {
     display: flex;
     align-items: center;
