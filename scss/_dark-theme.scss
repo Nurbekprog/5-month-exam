@@ -23,7 +23,6 @@ body {
     }
 
     .filters {
-      transition: 1s;
       .search-icon {
         transition: 1s;
         color: $white;
@@ -42,12 +41,10 @@ body {
 
       .dropdown-header,
       .dropdown-body {
-        transition: 1s;
         background: $dark-blue;
       }
 
       .dropdown-body {
-        transition: 1s;
         li {
           &:hover {
             transition: 1s;

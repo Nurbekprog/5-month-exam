@@ -265,10 +265,6 @@ body.dark-theme .header .theme-toggle {
   transition: 1s;
   color: #ffffff;
 }
-body.dark-theme .filters {
-  -webkit-transition: 1s;
-  transition: 1s;
-}
 body.dark-theme .filters .search-icon {
   -webkit-transition: 1s;
   transition: 1s;
@@ -307,13 +303,7 @@ body.dark-theme .filters .search-input::placeholder {
 }
 body.dark-theme .filters .dropdown-header,
 body.dark-theme .filters .dropdown-body {
-  -webkit-transition: 1s;
-  transition: 1s;
   background: #2b3945;
-}
-body.dark-theme .filters .dropdown-body {
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 body.dark-theme .filters .dropdown-body li:hover {
   -webkit-transition: 1s;
