@@ -341,13 +341,9 @@ body.dark-theme .countries-grid .country span {
   color: #ffffff;
 }
 body.dark-theme .loader {
-  -webkit-transition: 1s;
-  transition: 1s;
   background-color: #202c37;
 }
 body.dark-theme .loader .spinner .icon {
-  -webkit-transition: 1s;
-  transition: 1s;
   color: #ffffff;
 }
 body.dark-theme .scroll-top {
