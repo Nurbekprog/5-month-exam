@@ -68,11 +68,9 @@ body {
     }
 
     .loader {
-      transition: 1s;
       background-color: $bg-very-dark-blue;
 
       .spinner .icon {
-        transition: 1s;
         color: $white;
       }
     }
